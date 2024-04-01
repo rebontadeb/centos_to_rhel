@@ -34,7 +34,7 @@ yum install -y convert2rhel
 convert2rhel --auto-attach --username=username --password='password'
 ```
  ** The Above Steps Will convert CentOS to RHEL **
-
+# RHEL-TO-RHEL Leapp Upgrade
 * Once converted to RHEL Update Subscription Status.
 ```
 subscription-manager status
@@ -71,6 +71,10 @@ leapp answer --section remove_pam_pkcs11_module_check.confirm=True
 leapp preupgrade --target 8.9 --enablerepo mariadb-el8-main --enablerepo mariadb-el8-maxscale --enablerepo mariadb-el8-tools
 ```
 * Run Leapp Upgrade [ Check the Repo Name according to the environment ]
+```
 leapp upgrade --target 8.9 --enablerepo mariadb-el8-main --enablerepo mariadb-el8-maxscale --enablerepo mariadb-el8-tools
-
-
+```
+* After Upgrade Make sure Database is running and having data intact.
+```
+show databases;
+```
