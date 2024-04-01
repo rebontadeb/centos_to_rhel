@@ -50,7 +50,7 @@ yum update -y
 ```
 show databases;
 ```
-* Add Mariadb REPO
+* Add Target Mariadb REPO
 ```
 curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.5" --os-type="rhel" --os-version="8.9"
 ```
